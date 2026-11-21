@@ -1,0 +1,75 @@
+1.
+numbers=[10,20,30,40]
+for num in numbers:
+    print(num)
+
+2.
+numbers=[10,20,30,40]
+result=iter(numbers)
+print(next(result))
+print(next(result))
+print(next(result))
+print(next(result))
+
+
+3.
+list=[10,"rocky",10.00,"svuce"]
+result=iter(list)
+print(next(result))
+print(next(result))
+print(next(result))
+print(next(result))
+
+
+4.
+def numbers():
+    yield 10
+    yield 20
+    yield 30
+    yield 40
+result=numbers()
+print(next(result))
+print(next(result))
+print(next(result))
+print(next(result))
+
+
+
+5.
+def list():
+    yield 10
+    yield "rocky"
+    yield 10.00
+    yield "hemu"
+result=list()
+print(next(result))
+print(next(result))
+print(next(result))
+print(next(result))
+
+
+6.
+numbers=[x*x for x in range(10)]
+for num in numbers:
+    print(num)
+
+
+7.
+def outer():
+    clg="SVUCE"
+
+    def inner():
+        print(clg)
+    return inner
+result=outer()
+result()
+
+
+8.
+def rocky():
+    name="hemu"
+    def suri():
+        print(name)
+    return suri
+result=rocky()
+result()
